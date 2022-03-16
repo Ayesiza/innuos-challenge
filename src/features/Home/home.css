@@ -1,0 +1,45 @@
+
+.container { 
+    height: 100vh;
+    background-image:url(../../images/bgg.jpg) ; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(59, 59, 58);
+    background-position: 50% 50%;
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    /* margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+  }
+  .btn1{
+      font-size: 29px;
+      background: rgb(71, 71, 71);
+      border: solid 2px wheat;
+      color: aliceblue;
+      padding: 10px 20px; 
+      margin-top: 60px;
+      margin-left: 140px;
+      padding: 15px 30px;
+      text-align: center;
+      transition: .5s;
+      border: none;
+      outline: none;
+      color: #1b1b1b;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 2px;
+      
+    
+     
+  }
+
