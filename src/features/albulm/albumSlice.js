@@ -11,13 +11,10 @@ export const albumSlice = createSlice({
   reducers: {
     filterAlbums: (state, actions) => {
      
-      state.filteredCategory = actions.payload
-        ? JSON.parse(JSON.stringify(state.data)).filter(
-            (album) => album.source === actions.payload
-          )
-        : null;
-        console.log(JSON.stringify(state.data));
-       
+      state.filteredCategory = actions.payload ==="ALL"
+        ? JSON.parse(JSON.stringify(state.data))
+        :JSON.parse(JSON.stringify(state.data)).filter(album => album.source === actions.payload);
+
     },
   },
 });

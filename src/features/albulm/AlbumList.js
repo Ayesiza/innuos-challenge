@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./album.css";
 import { useDispatch, useSelector } from "react-redux";
 import NullImage from "../../images/undefined_album_cover.png";
@@ -8,14 +8,12 @@ import { filterAlbums } from "./albumSlice";
 
 const AlbumList = () => {
   const { data, filteredCategory } = useSelector(({ album }) => album);
-  //const [ search, setSearch] = useState('')
   const dispatch = useDispatch();
 
-  const handleChange = () => {
-    dispatch(filterAlbums(filteredCategory));
+  const handleChange = (e) => {
+    dispatch(filterAlbums(e.target.value.toUpperCase()))
   };
 
-  //const albums = useSelector((state) => state.album.albums);
   return (
     <div className="albums">
       <div className="topwrap">
@@ -25,14 +23,14 @@ const AlbumList = () => {
         </Link>
         <div className="borderedContainer">
           <b>Filter: </b>
-          <div>
-            <button onClick={handleChange} className="filterButton">
+          <div >
+            <button  value='All' onClick={handleChange} className="filterButton">
               All
             </button>
-            <button onClick={handleChange} className="filterButton">
+            <button value='Qobuz'onClick={handleChange} className="filterButton">
               Qobuz
             </button>
-            <button onClick={handleChange} className="filterButton">
+            <button value='Local' onClick={handleChange} className="filterButton">
               Local
             </button>
           </div>
@@ -40,10 +38,17 @@ const AlbumList = () => {
       </div>
 
       <div className="card-item">
-        {(filteredCategory || data).map((alb, index) => (
-          <div key={index} className="card">
+        {(filteredCategory || data).map((alb) => (
+          <div key={alb.id} className="card">
             {alb.cover === null ? (
-              <div style={{ backgroundColor:'rgb(27, 27, 27)'}}><img className="image" style={{height:"250px", margin:'5px'}} src={NullImage} alt="null_pic" /></div>
+              <div style={{ backgroundColor: "rgb(27, 27, 27)" }}>
+                <img
+                  className="image"
+                  style={{ height: "250px", margin: "5px" }}
+                  src={NullImage}
+                  alt="null_pic"
+                />
+              </div>
             ) : (
               <img className="image" src={`./covers/${alb.cover}`} alt="Pic" />
             )}
@@ -56,8 +61,9 @@ const AlbumList = () => {
             </div>
             <div>
               <div className="card-info">
+              <p>{alb.album}</p>
                 <p>{alb.artist}</p>
-                <p>{alb.album}</p>
+               
               </div>
             </div>
           </div>
