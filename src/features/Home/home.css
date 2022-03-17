@@ -6,6 +6,7 @@
     background-size: cover;
     background-color: rgb(59, 59, 58);
     background-position: 50% 50%;
+    
   }
   
   .center {
@@ -13,13 +14,6 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
-    /* margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
   }
   .btn1{
       font-size: 29px;

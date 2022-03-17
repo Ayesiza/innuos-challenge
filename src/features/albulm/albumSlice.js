@@ -1,22 +1,27 @@
-
 import { createSlice } from "@reduxjs/toolkit";
-import albums from "../../albums.json";
+import data from '../../albums.json'
+const initialState = {
+  data,
+  filteredCategory: null,
+};
 
 export const albumSlice = createSlice({
-  name: "album",
-  initialState: { albums },
-
+  name: "Albums",
+  initialState,
   reducers: {
-    filterAlbum: (state, actions) => {
-      state.albums = state.albums.filter((album) => album.source === actions.payload
-        // state.filtered= actions.payload? JSON.parse(JSON.stringify(state.albums)).filter(
-        //   (album) =>album.source ===actions.payload
-        // ):null;
-      );
+    filterAlbums: (state, actions) => {
+     
+      state.filteredCategory = actions.payload
+        ? JSON.parse(JSON.stringify(state.data)).filter(
+            (album) => album.source === actions.payload
+          )
+        : null;
+        console.log(JSON.stringify(state.data));
+       
     },
   },
 });
 
-export const { filterAlbum } = albumSlice.actions;
+export const { filterAlbums } = albumSlice.actions;
 
 export default albumSlice.reducer;
