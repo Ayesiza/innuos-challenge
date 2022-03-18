@@ -10,7 +10,7 @@ const Home = () => {
       <Header/>
       <div className="center">
         <button className="btn1">
-          <Link to="/albums" style={{ textDecoration: "none", color:"white" }}>
+          <Link to="/albums"  style={{ textDecoration: "none", color:"white" }}>
             GET ALBULMS
           </Link>
         </button>

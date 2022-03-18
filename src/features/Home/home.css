@@ -16,22 +16,18 @@
     height: 100vh;
   }
   .btn1{
-      font-size: 29px;
+      font-size: 20px;
       background: rgb(71, 71, 71);
-      border: solid 2px wheat;
+      border: solid 4px rgb(238, 193, 110);
       color: aliceblue;
-      padding: 10px 20px; 
       margin-top: 60px;
       margin-left: 140px;
-      padding: 15px 30px;
+      padding: 15px 20px;
       text-align: center;
       transition: .5s;
-      border: none;
-      outline: none;
-      color: #1b1b1b;
-      font-size: 20px;
-      font-weight: 700;
-      border-radius: 2px;
+      border-style:double;
+      border-radius: 10px;
+      font-weight: 100;
       
     
      
