@@ -1,18 +1,11 @@
 
-  .card-item{
-    background: rgb(39, 34, 34);
+  
+  .card-items{
     display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
     
     
-}
-.filtertabs {
-  display: flex;
-  text-align: right;
-  width: 400px;
-  justify-content: space-between;
-  padding: 30px;
 }
 
 .image{
@@ -21,14 +14,14 @@
     
 }
 .card {
-  width: 250px;
-  margin: 10px;
+ width: 250px;
+ height: 350px;
+ margin: 5px;
   background: rgb(39, 34, 34);
   display: flex;
   flex-direction: column;
   cursor:pointer;
-  
-  
+  box-sizing: border-box;
   
 }
 h4, p{
@@ -42,24 +35,29 @@ color: whitesmoke;
 
 
 .topwrap{
+ padding: 10px;
 display: flex;
-background:rgb(27, 27, 27);
-
+background:#D1CCCC;
+justify-content: space-between;
+margin-bottom: 20px;
 
 }
 .sider{
-flex: 1;
-margin: 1%;
 display: flex;
+text-decoration:none;
+align-items: center;
+justify-content: space-between;
 
 }
 
 /*filter*/
 .borderedContainer {
-margin: 10px;
-background-color: #fff;
-padding: 10px;
+margin: 1%;
+background-color:#D1CCCC;
+padding: 0 10px 0px 10px;
 box-shadow: 0 2px 10px rgb(0 0 0/25%);
+display: flex;
+align-items: center;
 }
 
 .filterButton {

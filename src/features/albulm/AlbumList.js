@@ -19,11 +19,11 @@ const AlbumList = () => {
       <div className="topwrap">
         <Link className="sider" to="/">
           <img className="logo" src={logo} alt="" />
-          <h4 style={{ color: "white", textDecoration: "none" }}>Home</h4>
+          <h2 style={{color:'black', marginLeft:'10px'}}>Home</h2>
         </Link>
         <div className="borderedContainer">
-          <b>Filter: </b>
-          <div >
+          <h3>Filter:  </h3>
+          
             <button  value='All' onClick={handleChange} className="filterButton">
               All
             </button>
@@ -33,18 +33,19 @@ const AlbumList = () => {
             <button value='Local' onClick={handleChange} className="filterButton">
               Local
             </button>
-          </div>
+         
         </div>
       </div>
 
-      <div className="card-item">
+      <div className="card-items">
         {(filteredCategory || data).map((alb) => (
           <div key={alb.id} className="card">
+            <div>
             {alb.cover === null ? (
-              <div style={{ backgroundColor: "rgb(27, 27, 27)" }}>
+              <div style={{ background: "#1B1B1B" }}>
                 <img
                   className="image"
-                  style={{ height: "250px", margin: "5px" }}
+                  
                   src={NullImage}
                   alt="null_pic"
                 />
@@ -59,13 +60,12 @@ const AlbumList = () => {
                 ""
               )}
             </div>
-            <div>
+           </div>
               <div className="card-info">
               <p>{alb.album}</p>
                 <p>{alb.artist}</p>
-               
               </div>
-            </div>
+           
           </div>
         ))}
       </div>

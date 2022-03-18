@@ -1,7 +1,7 @@
 .topbar{
     width:100%;
     height: 50px;
-    background-color: white;
+    background-color: #D1CCCC;
 }
  .topbarWrapper{
      height: 100%;
@@ -24,7 +24,7 @@
     padding: 10px 20px; 
     text-align: center;
     transition: .5s;
-    border: none;
+    border: #D1CCCC 2px solid;
     outline: none;
     color: #1b1b1b;
     font-size: 20px;

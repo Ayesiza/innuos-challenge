@@ -8,13 +8,9 @@ const Header = () => {
       <div className="topbarWrapper">
         <div className="topLeft">
           <img className="logo" src={logo} alt="" />
-          <button>Home</button>
         </div>
-        <div className="topRight">
-          <div className="topbarIconsContainer">
-            <button>Login</button>
-          </div>
-        </div>
+        
+       
       </div>
     </div>
   );

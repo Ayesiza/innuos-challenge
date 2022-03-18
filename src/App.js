@@ -7,7 +7,7 @@ import Home from "./features/Home/Home";
 
 function App() {
   return (
-    <div>
+    <div style={{background:'#272222'}}>
      
       <Routes>
         <Route exact path="/" element={<Home />} />
